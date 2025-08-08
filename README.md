@@ -4,17 +4,14 @@ This repository contains my internship capstones. Each project has its own folde
 
 ## Projects
 
-1. **CreativeChain** – media authenticity + simple royalties with 2FA buyer view  
-   - Frontend: `frontend/` (React)  
-   - Backend: `backend/` (Node/Express)  
-   - README: [frontend/README.md](frontend/README.md)
+- **[NeuroSphere (AI Admin Assistant)](NeuroSphere/README.md)**  
+  Flask-based clinic dashboard with login, calendar, reminders, clinic log, messages, and dark mode.
 
-2. **NeuroSphere** – (Flask app: clinic dashboard, calendar, reminders)  
-   - Folder: `NeuroSphere/`  
-   - README: `NeuroSphere/README.md` *(to be added)*
+- **[CreativeChain (Blockchain Watermarking App)](frontend/README.md)**  
+  React + Web3 app for secure digital watermarking, file verification, and simulated royalty tracking.
 
-3. **SecureHome-VPN** – (Flask demo: VPN admin panel)  
-   - Folder: `SecureHome-VPN/`  
-   - README: `SecureHome-VPN/README.md` *(to be added)*
+- **[SecureHome VPN](backend/README.md)**  
+  Flask + WireGuard VPN with RustDesk integration, smart reminders, server selection, and logs.
 
-> All code is public and runnable on a separate machine. See each project’s README for prerequisites and steps.
+---
+
