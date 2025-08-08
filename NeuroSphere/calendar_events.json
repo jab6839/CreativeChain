@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "title": "Botox appointment",
+        "start": "2025-08-13T09:00",
+        "end": "2025-08-07T23:51"
+    },
+    {
+        "id": 2,
+        "title": "Staff Meeting",
+        "start": "2025-08-22T10:02"
+    }
+]

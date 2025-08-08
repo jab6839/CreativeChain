@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h2 style="margin-top:10px;">Patient Messages</h2>
+
+  <!-- Add Message -->
+  <form action="{{ url_for('messages') }}" method="POST" style="margin:20px auto; max-width:700px; display:flex; gap:10px; flex-wrap:wrap;">
+    <input type="text" name="patient" placeholder="Patient name" required
+           style="flex:1 1 200px; padding:10px; border:1px solid #ccc; border-radius:6px;">
+    <textarea name="message" placeholder="Type message…" required
+              style="flex:2 1 300px; padding:10px; border:1px solid #ccc; border-radius:6px; min-height:80px;"></textarea>
+    <button type="submit" style="padding:10px 18px; border:none; border-radius:6px; background:#6a0dad; color:#fff; font-weight:600; cursor:pointer;">
+      Send
+    </button>
+  </form>
+
+  <!-- List -->
+  {% if messages and messages|length > 0 %}
+  <div style="max-width:900px; margin:0 auto; overflow-x:auto;">
+    <table style="width:100%; border-collapse:collapse; background:#fff; border-radius:10px; overflow:hidden;">
+      <thead>
+        <tr style="background:#f1e6ff;">
+          <th style="text-align:left; padding:12px;">Patient</th>
+          <th style="text-align:left; padding:12px;">Message</th>
+          <th style="text-align:left; padding:12px;">Status</th>
+          <th style="text-align:left; padding:12px;">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for m in messages %}
+        <tr style="border-top:1px solid #eee; {% if dark_mode %}background:#3a3a3a; color:#fff;{% endif %}">
+          <td style="padding:12px;">{{ m.patient if m.patient is defined else m['patient'] }}</td>
+          <td style="padding:12px;">{{ m.message if m.message is defined else m['message'] }}</td>
+          <td style="padding:12px;">
+            {{ m.status if m.status is defined else m['status'] }}
+          </td>
+          <td style="padding:12px;">
+            <form action="{{ url_for('delete_message', index=loop.index0) }}" method="POST" style="display:inline;">
+              <button type="submit" style="padding:6px 10px; border:none; border-radius:6px; background:#dc3545; color:#fff; cursor:pointer;">
+                Delete
+              </button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+    <p style="margin-top:20px; opacity:0.8;">No messages yet.</p>
+  {% endif %}
+</div>
+{% endblock %}
+

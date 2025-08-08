@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Urgent",
+        "content": "\u26a0\ufe0f Action needed today.",
+        "type": "Urgent"
+    },
+    {
+        "title": "Delivery",
+        "content": "Schedule Botox deliveries for Friday patients",
+        "type": "Urgent"
+    }
+]

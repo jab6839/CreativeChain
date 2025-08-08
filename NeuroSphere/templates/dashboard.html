@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | NeuroSphere</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="{% if session.get('dark_mode') %}dark-mode{% endif %}">
+    <nav class="navbar">
+        <img src="{{ url_for('static', filename='neurosphere_logo.png') }}" class="logo-img" alt="NeuroSphere Logo">
+        <div class="nav-title">NeuroSphere</div>
+        <div class="nav-links">
+            <a href="/dashboard">Dashboard</a>
+            <a href="/messages">Messages</a>
+            <a href="/reminders">Reminders</a>
+            <a href="/calendar">Calendar</a>
+            <a href="/schedule">Schedule</a>
+            <a href="/clinic_log">Clinic Log</a>
+            <a href="/logout">Logout</a>
+            <button onclick="toggleDarkMode()" class="dark-mode-toggle">🌓</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <h1>Welcome to NeuroSphere</h1>
+        <div class="tiles">
+            <a href="/messages" class="tile purple">Total Messages</a>
+            <a href="/schedule" class="tile blue">Pending Schedules</a>
+            <a href="/reminders" class="tile green">Today's Reminders</a>
+            <a href="/reminders#urgent" class="tile red">Urgent Reminders</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            fetch('/toggle_dark_mode')
+                .then(response => response.json())
+                .then(data => {
+                    document.body.classList.toggle('dark-mode', data.dark_mode);
+                });
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,17 @@
+[
+    {
+        "patient": "Thomas Willis",
+        "message": "Hello Thomas, your MRI results are ready for review. Please call the office to schedule.",
+        "status": "Unread"
+    },
+    {
+        "patient": "Camille Robinson",
+        "message": "We\u2019ve sent your prescription refill to your pharmacy.",
+        "status": "Unread"
+    },
+    {
+        "patient": "Marcus Bell",
+        "message": "Reminder: Your appointment is scheduled for August 12 at 10:00 AM.",
+        "status": "Unread"
+    }
+]
