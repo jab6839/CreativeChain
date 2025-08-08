@@ -1,20 +1,25 @@
-# Capstone Portfolio 2025
+# Project Portfolio
 
-This repository contains my internship capstones. Each project has its own folder and README with setup and run instructions.
+This repository contains links to my main projects and their source code.
 
 ## Projects
 
-- **[NeuroSphere (AI Admin Assistant)](NeuroSphere/README.md)**  
-  Flask-based clinic dashboard with login, calendar, reminders, clinic log, messages, and dark mode.
+### CreativeChain
+A blockchain-powered content protection and royalty tracking platform with watermarking, buyer verification, and file hash storage.
 
-- **[CreativeChain (Blockchain Watermarking App)](frontend/README.md)**  
-  React + Web3 app for secure digital watermarking, file verification, and simulated royalty tracking.
-
-- **[SecureHome VPN](backend/README.md)**  
-  Flask + WireGuard VPN with RustDesk integration, smart reminders, server selection, and logs.
+**Repository:** [CreativeChain](https://github.com/jab6839/creativechain)
 
 ---
 
+### NeuroSphere
+A healthcare admin assistant dashboard built with Flask, featuring a messages tab, reminders, schedule management, calendar integration, and clinic log.
 
-- **SecureHome-VPN**
-  - [README](SecureHome-VPN/README.md)
+**Repository:** [NeuroSphere](https://github.com/jab6839/neurosphere_clean)
+
+---
+
+### SecureHome VPN
+A home-based VPN solution with WireGuard backend, RustDesk remote desktop integration, smart reminders, and live connection status.
+
+**Repository:** [SecureHome-VPN](https://github.com/jab6839/securehome-vpn)
+
